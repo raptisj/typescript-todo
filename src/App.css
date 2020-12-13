@@ -1,38 +1,106 @@
-.App {
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.wrapper {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.divider {
+  margin: 1rem 0;
+  height: 2px;
+  width: 400px;
+  margin: 0 auto;
+  background: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form {
+  max-width: 400px;
+  margin: 0 auto 1rem auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form .form__input {
+  width: 100%;
+  height: 44px;
+  font-size: 20px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.form .form__button {
+  background: transparent;
+  border: 3px solid #333;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  margin-top: 1rem;
+  cursor: pointer;
+  padding: .3rem 1rem;
+}
+
+.form .form__button:hover {
+  background: #333;
+  color: #fff;
+}
+
+.rows {
+  max-width: 400px;
+  margin: 1rem auto;
+}
+
+.row {
+  background: #e6e6e6;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 70px;
+  grid-gap: 1rem;
+}
+
+.row .row__actions {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.row > p {
+  text-align: left;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.line-trough {
+  text-decoration: line-through;
+}
+
+.row .row__actions button {
+  color: #fff;
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 13px;
+  margin: 4px 0;
+  border: none;
+  cursor: pointer;
+}
+
+.row .row__actions label {
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.row .row__actions .strike {
+  background: #673AB7;
+}
+
+.row .row__actions .delete {
+  background: red;
 }
